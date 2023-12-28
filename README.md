@@ -73,8 +73,6 @@ psql capstone_test < capstone.psql
 python test_app.py
 ```
 
-Optionally, you can use `run_test.sh` script.
-
 #### Auth0 Setup
 
 You need to setup an Auth0 account.
@@ -82,7 +80,7 @@ You need to setup an Auth0 account.
 Environment variables needed: (setup.sh)
 
 ```bash
-export AUTH0_DOMAIN="xxxxxxxxxx.auth0.com" # Choose your tenant domain # Example : dev-fsnd-capstone.us.auth0.com
+export AUTH0_DOMAIN="dev-sif3oiav3j1s6ypx.us.auth0.com" # Choose your tenant domain # Example : dev-fsnd-capstone.us.auth0.com
 export ALGORITHMS="RS256"
 export API_AUDIENCE="capstone" # Create an API in Auth0
 ```
@@ -126,18 +124,18 @@ Following permissions should be created under created API settings.
 
 ##### JWT Tokens for each role:
 
--   Casting Assistant - `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF5YkZZU0o1SkUyNTRPdWp0TFJJMiJ9.eyJpc3MiOiJodHRwczovL2Rldi1mc25kLWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGVkZWQ0MTQ5ZTMxMTAzNWFkN2JiMWYiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY5NDUzMDQyNSwiZXhwIjoxNjk0NjE2ODI1LCJhenAiOiJtV2d1NnBBemRvZWthRXJmaFVXdkhEd21zZk1SeWg5ZyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.AQM8fQ_V0OXuF01FWJQV3aUprF9vJDRf_LC-9j0swUsNAqkZduMCdShsVfz1r8WCtQwJODio1EvxG1sahfBiBeoNS7Z4YGJdZSH_DhHcClW0VNDzkYzyBbI8NSwj4Uw31G77IyonccFIha1vhz17_f9Qurfm7dQccFXuD_o7aIztmbzpxdt0ONpJnisuu1mzDoXmVkloKzXK4FPpWiQViArzPT8m6XizhOUvQgezZGjqZaRtOZaiffu3PBBKg-8NNifCSoGr_lpM_89RNPNqZq3Y2qJxW2XvdicB3ly2_ca8J58Gf0uVoxXFT-hYjtPclU9xiUsVTwHrqk-at68_EA`
+-   Casting Assistant - `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFnTGRtdDJSYk5rODRVX1p6bk5HSiJ9.eyJpc3MiOiJodHRwczovL2Rldi1zaWYzb2lhdjNqMXM2eXB4LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NThkMGIzMzdkYWFkNDI4MDEwOGVlMWUiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTcwMzc0MjM4MCwiZXhwIjoxNzAzNzQ5NTgwLCJhenAiOiJQRmFieW1OVnQyYXBPZzBGZnpIWFpjelVxbWZtVjBuUiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.XNkwFnFiLngWrahcaTsANw2gl-CfdghwB6xCnJDd5mD54jtdJvbfbExjV7iyu9HsGjcigni_hLXBVSUqHEbW5FJBYiXPG1Ptq7exMYzk0S442bALO7rYNdaUm9X57cd0k8P7wrd_5mYUll5RXCQ3D-0HgzSaAMu2J5C1CO5xLXR-FLM8jKOhTiIpmbWgUbowi-HQOM7rTGi4ypreqdxHX9AL1h7yGRBn6h9Vn9DikNWUKzeiFhCaXe3G3dj4QXF43TzUPK6b024VDKmUCr6_PrpiuRVBsmEXnuVJN_iQE2dGzeeRrrmCSN_ljaeiV1tJYnA28kkYAAnU2tddH3qd-A`
 
--   Casting Director : `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF5YkZZU0o1SkUyNTRPdWp0TFJJMiJ9.eyJpc3MiOiJodHRwczovL2Rldi1mc25kLWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGVkZWQ2MTQ5ZTMxMTAzNWFkN2JiMmMiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY5NDUzMDUyNiwiZXhwIjoxNjk0NjE2OTI2LCJhenAiOiJtV2d1NnBBemRvZWthRXJmaFVXdkhEd21zZk1SeWg5ZyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.JodFnK2MDnby8wIvcEYMx-3CNVrFzeUjxO3eU5cLNU6Rm7bKoSgonZ0vnON1a_vLRTP3M8_7zrkUMrfWQQzJudhuKUf7mKP9JMH8MjlLdRhCufvAu4-OhPGQGPJ3YdiUvKluv4tOZ_6n-jwWW4m_TjRzo8egyTKsWmWzmBONjS4-C7qMUQaTdNgDU5HXCVVC8MlD6qNLHmww-nHrGOXynWWEsH0FK0Gh_8ayVHFpVjHeKe3as9kr2DHTZDrQ4CK6g68ITQF8Y8suc92bhyPgs1cpWC7UXvsc0yKyyKVN1R5AriHcgCkCybEEL3i8BnmjJpkWdOSLE1RNbVJ4-8AorA`
+-   Casting Director : `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFnTGRtdDJSYk5rODRVX1p6bk5HSiJ9.eyJpc3MiOiJodHRwczovL2Rldi1zaWYzb2lhdjNqMXM2eXB4LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NThkMGJmMGNjMDIyNmQ0YWY5MmZkNzAiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTcwMzc0MjQ4NSwiZXhwIjoxNzAzNzQ5Njg1LCJhenAiOiJQRmFieW1OVnQyYXBPZzBGZnpIWFpjelVxbWZtVjBuUiIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImRlbGV0ZTphY3RvcnMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInVwZGF0ZTphY3RvcnMiLCJ1cGRhdGU6bW92aWVzIl19.sKjozPaNyyNbyW_zMqxglR0-ZVSXBMQryPh-Qia_ZxXF8wyioJh5KsIuX35aKj--5iL6IvyitszdbvpAscRyLc3CSUpFHxquEIQbzRIVxp0iiUF4_wGVuubCNoBP0zaoXJ3HPDdy0W5qSf4kJsvvsmMHPzNe8N5PBUL1OMoMkFDK53W-LbgsM1PBVGwbCNKQuMT-UiY9gLMyawvgdKitRKzFKVNcB_bxW1jNXIcKb0b-5JcuLY5NmkdbaUZF44STGeNapzM_r96PF-D-gZu4vbVXfGBh0mVlDaRDeFCraOe-PymwzW_ytnsh--rZlqS7JBEM0YUtVIOK2E5PtiNrEw`
 
--   Executive Producer : `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkF5YkZZU0o1SkUyNTRPdWp0TFJJMiJ9.eyJpc3MiOiJodHRwczovL2Rldi1mc25kLWNhcHN0b25lLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NGVkZWQ3ZTQ5ZTMxMTAzNWFkN2JiMzIiLCJhdWQiOiJjYXBzdG9uZSIsImlhdCI6MTY5NDUzMDYxNCwiZXhwIjoxNjk0NjE3MDE0LCJhenAiOiJtV2d1NnBBemRvZWthRXJmaFVXdkhEd21zZk1SeWg5ZyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiY3JlYXRlOmFjdG9ycyIsImNyZWF0ZTptb3ZpZXMiLCJkZWxldGU6YWN0b3JzIiwiZGVsZXRlOm1vdmllcyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwidXBkYXRlOmFjdG9ycyIsInVwZGF0ZTptb3ZpZXMiXX0.VdIPFDW_Qi0APCGwnHMmqcCw8PhnS3bpO3e340qm-U31iHdaVHAf4njVelWkUuulZrj-htQHH47c-DZgocZi0WNrdWjp4KHqIS1WaKpztOHAQq782BiHBkL5AP-ZUupyw1PXQiSe3mSzGTI3Rm38hpcba7xET4MikUgUkYHyG7bM_BswC0m7S3G8827uiXs5jIm6c7OtfEW2oeYLHK_Rg5j5zV5weQGU_YtcvfhYLh8tzZgdJrNvXVXiT-VtMZZvHuuzD9C7ptFuky2uduCqjIjB3Bd5qYiBVzms9IqxP9VkAl80L0o6fnSMw_q1kOBBeBIZNXa6lp1uNZDDg-Np4g`
+-   Executive Producer : `eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkFnTGRtdDJSYk5rODRVX1p6bk5HSiJ9.eyJpc3MiOiJodHRwczovL2Rldi1zaWYzb2lhdjNqMXM2eXB4LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMTUwNDk1ODI2MTIyMTc2ODcxMCIsImF1ZCI6ImNhcHN0b25lIiwiaWF0IjoxNzAzNzQyMTQxLCJleHAiOjE3MDM3NDkzNDEsImF6cCI6IlBGYWJ5bU5WdDJhcE9nMEZmekhYWmN6VXFtZm1WMG5SIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJjcmVhdGU6YWN0b3JzIiwiY3JlYXRlOm1vdmllcyIsImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJ1cGRhdGU6YWN0b3JzIiwidXBkYXRlOm1vdmllcyJdfQ.DJb5gjPrFnUTRX6BFZbJvxcb7WNfVhUaHvhL6Kn08jNCQcoJ6ODS5CJmhmr5Mtjt7SRyOSvFnl0BOJ9zAozphnhK9FQlL2FdrX2sIO-vrWUH7ZEHvSAzDr97lH1y9Xj6B5pH3Y4oYV809-dFR4egtT0wxM-qzWVpYqmlvqz-a_VTBEXL7z3y1FmrBPnqBHFco6Uj_vZrkY_55IiVd3yYzpA6z7YpnbkUB19ufalw5Aun083Gz1VRfU8rnCEV6nb4bYwaFbHTLAaLhpL2p-CurKFue9fige72CMqVQWWwIYpBi0zmWiB0VObAtN0Kauxlms83YE1ibN1wNDvobmDPtQ`
 
 ##### Set JWT Tokens in `auth_config.json`
 
 Use the following link to create users and sign them in. This way, you can generate
 
 ```
-https://dev-sif3oiav3j1s6ypx.us.auth0.com/authorize?audience=capstone&response_type=token&client_id=PFabymNVt2apOg0FfzHXZczUqmfmV0nR&redirect_uri=http://localhost:5000
+https://dev-sif3oiav3j1s6ypx.us.auth0.com/authorize?audience=capstone&response_type=token&client_id=PFabymNVt2apOg0FfzHXZczUqmfmV0nR&redirect_uri=https://render-deployment-capstone-xfu3.onrender.com/
 ```
 
 #### Launching The App
@@ -158,10 +156,10 @@ https://dev-sif3oiav3j1s6ypx.us.auth0.com/authorize?audience=capstone&response_t
 3.  Configure database path to connect local postgres database in `models.py`
 
         ```python
-        database_path = "postgres://{}/{}".format('localhost:5432', 'capstone_project')
+        database_path = "postgresql://{}/{}".format('localhost:5432', 'capstone_project')
         ```
 
-    **Note:** For default postgres installation, default user name is `postgres` with no password. But if you need, you can use this template:
+    **Note:** For default postgres installation, default user name is `postgresql` with no password. But if you need, you can use this template:
 
         ```python
         database_path = "postgresql://{}:{}@{}/{}".format({{YOUR_USERNAME}}, {{YOUR_PASSWORD}}, 'localhost:5432', 'capstone_project')
