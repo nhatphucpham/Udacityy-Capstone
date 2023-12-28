@@ -2,7 +2,7 @@
 
 Udacity Full-Stack Web Developer Nanodegree Program Capstone Project
 
--   [Heroku](https://capstone-casting-a15b45204462.herokuapp.com/): Link Heroku
+-   [Render](https://render-deployment-capstone-xfu3.onrender.com/): Link Render
 
 ## Project Motivation
 
